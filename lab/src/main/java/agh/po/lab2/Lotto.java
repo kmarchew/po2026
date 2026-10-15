@@ -17,25 +17,14 @@ public class Lotto {
         }
 
         ArrayList<Integer> moje_liczby = new ArrayList<>();
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Wprowadź 6 liczb całkowitych:");
-        for (int i = 0; i < 6; i++) {
-            System.out.print("Podaj liczbę " + (i + 1) + ": ");
-            int liczba = scan.nextInt();
-            moje_liczby.add(liczba);
-        }
-        scan.close();
+
+
+
+
+
 
         System.out.println(moje_liczby);
-
-//        Scanner scan = new Scanner(System.in);
-//        System.out.println("Podaj liczbe lotto:");
-//        while (true) {
-//            String moje_liczby = scan.nextLine();
-//            if (moje_liczby)
-//        }
-
         System.out.println(wylosowane);
         System.out.println(random);
-    }
+}
 }
