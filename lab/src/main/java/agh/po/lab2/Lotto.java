@@ -17,7 +17,16 @@ public class Lotto {
 
         ArrayList<Integer> moje_liczby = new ArrayList<>();
         for (String arg : args) {
-            moje_liczby.add(Integer.parseInt(arg));
+            int liczba = Integer.parseInt(arg);
+            if (liczba >= 1 && liczba <= 49) {
+                if (!moje_liczby.contains(liczba)) {
+                    moje_liczby.add(liczba);
+                } else {
+                    System.out.println("liczba " + liczba + "się powtarza");
+                }
+            } else {
+                System.out.println("liczba " + liczba + " poza zakresem");
+            }
         }
 
         int trafienia = 0;
@@ -25,6 +34,17 @@ public class Lotto {
             if (wylosowane.contains(liczba)) {
                 trafienia++;
             }
+        }
+
+        if (moje_liczby.size() == 6) {
+            long start_Time = System.currentTimeMillis();
+            long l_prob = 0;
+
+            while (true) {
+                l_prob++;
+                
+            }
+
         }
 
         System.out.println("Twoje typy: " + moje_liczby);
