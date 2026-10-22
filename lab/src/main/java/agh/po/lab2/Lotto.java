@@ -42,7 +42,16 @@ public class Lotto {
 
             while (true) {
                 l_prob++;
-                
+                ArrayList<Integer> nowe_losowania = new ArrayList<>();
+                while (nowe_losowania.size() < 6) {
+                    int liczba = random.nextInt(49) + 1;
+                    if (!nowe_losowania.contains(liczba)) {
+                        nowe_losowania.add(liczba);
+                    }
+                }
+                if (nowe_losowania.containsAll(moje_liczby)){
+                    break;
+                }
             }
 
         }
