@@ -2,7 +2,6 @@ package agh.po.lab2;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Lotto {
     public static void main(String[] args) {
@@ -17,14 +16,21 @@ public class Lotto {
         }
 
         ArrayList<Integer> moje_liczby = new ArrayList<>();
+        for (String arg : args) {
+            moje_liczby.add(Integer.parseInt(arg));
+        }
+
+        int trafienia = 0;
+        for (int liczba : moje_liczby) {
+            if (wylosowane.contains(liczba)) {
+                trafienia++;
+            }
+        }
+
+        System.out.println("Twoje typy: " + moje_liczby);
+        System.out.println("Wylosowane liczby: " + wylosowane);
+        System.out.println("Liczba trafień: " + trafienia);
 
 
-
-
-
-
-        System.out.println(moje_liczby);
-        System.out.println(wylosowane);
-        System.out.println(random);
-}
+    }
 }
