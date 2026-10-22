@@ -53,6 +53,12 @@ public class Lotto {
                     break;
                 }
             }
+            long endTime = System.currentTimeMillis();
+            long czasDzialania = endTime - start_Time;
+
+            System.out.println("\n--- Symulacja 6/6 ---");
+            System.out.println("iloś losowań: " + l_prob);
+            System.out.println("czas działania programu: " + czasDzialania + " ms");
 
         }
 
